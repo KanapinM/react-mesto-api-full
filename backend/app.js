@@ -16,7 +16,8 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const NotFoundError = require('./errors/NotFoundError');
 
 const { PORT = 3000 } = process.env;
-const env = 'mongodb://localhost:27017/mestodb';
+// const env = 'mongodb://localhost:27017/mestodb';
+const env = 'mongodb://127.0.0.1/mestodb';
 
 const allowedCors = [
   'https://mkmesto.nomoredomains.work',
@@ -29,18 +30,19 @@ const app = express();
 // eslint-disable-next-line prefer-arrow-callback
 app.use(function (req, res, next) {
   const { method } = req; // Сохраняем источник запроса в переменную origin
+  const { origin } = req.headers;
   const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
   const requestHeaders = req.headers['access-control-request-headers'];
+  if (allowedCors.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+  }
   // проверяем, что источник запроса есть среди разрешённых
   if (method === 'OPTIONS') {
     res.header('Access-Control-Allow-Methods', DEFAULT_ALLOWED_METHODS);
     res.header('Access-Control-Allow-Headers', requestHeaders);
     return res.end();
   }
-  const { origin } = req.headers;
-  if (allowedCors.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', origin);
-  }
+
   next();
 });
 
