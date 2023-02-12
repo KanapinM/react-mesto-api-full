@@ -17,7 +17,7 @@ const NotFoundError = require('./errors/NotFoundError');
 
 const { PORT = 3000 } = process.env;
 // const env = 'mongodb://localhost:27017/mestodb';
-const env = 'mongodb://127.0.0.1/mestodb';
+const env = 'mongodb://127.0.0.1/mestodb1';
 
 const allowedCors = [
   'https://mkmesto.nomoredomains.work',
