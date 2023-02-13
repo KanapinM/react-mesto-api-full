@@ -27,6 +27,23 @@ const allowedCors = [
 
 const app = express();
 
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+app.use(limiter);
+app.use(helmet());
+
+app.disable('x-powered-by');
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+mongoose.connect(env);
+app.use(cookieParser());
+app.use(requestLogger);
+
 // eslint-disable-next-line prefer-arrow-callback
 app.use(function (req, res, next) {
   const { method } = req; // Сохраняем источник запроса в переменную origin
@@ -46,23 +63,6 @@ app.use(function (req, res, next) {
 
   next();
 });
-
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 100,
-  standardHeaders: true,
-  legacyHeaders: false,
-});
-app.use(limiter);
-app.use(helmet());
-
-app.disable('x-powered-by');
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-mongoose.connect(env);
-app.use(cookieParser());
-app.use(requestLogger);
 
 app.post('/signin', signInValidation(), login);
 app.post('/signup', signUpValidation(), createUser);
