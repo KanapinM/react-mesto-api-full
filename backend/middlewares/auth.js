@@ -2,8 +2,9 @@ require('dotenv').config();
 
 // const { NODE_ENV, JWT_SECRET } = process.env;
 
-// const { JWT_SECRET = 'JWT_SECRET' } = process.env;
-const { JWT_SECRET = '3249fd8a9a9b728c91370877b91d437f726d199291890896dd5e838f6794f31d' } = process.env;
+const { JWT_SECRET = 'JWT_SECRET' } = process.env;
+// eslint-disable-next-line max-len
+// const { JWT_SECRET = '3249fd8a9a9b728c91370877b91d437f726d199291890896dd5e838f6794f31d' } = process.env;
 
 const jwt = require('jsonwebtoken');
 const Unauthorized = require('../errors/Unauthorized');
