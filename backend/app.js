@@ -35,6 +35,7 @@ app.use(function (req, res, next) {
   const requestHeaders = req.headers['access-control-request-headers'];
   if (allowedCors.includes(origin)) {
     res.header('Access-Control-Allow-Origin', origin);
+    res.header('Access-Control-Allow-Credentials', true);
   }
   // проверяем, что источник запроса есть среди разрешённых
   if (method === 'OPTIONS') {
@@ -85,7 +86,7 @@ app.use((err, req, res, next) => {
         : message,
     });
 
-  next();
+  next(err);
 });
 
 app.listen(PORT, () => {
