@@ -1,0 +1,27 @@
+.user__submit-button {
+    margin: 196px auto 15px;
+    padding: 13px 0 14px;
+    text-align: center;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    border-radius: 2px;
+    transition: ease-in-out 0.3s;
+}
+
+.user__submit-button:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 767px) {
+    .user__submit-button {
+        padding: 0 auto;
+        min-height: 46px;
+        margin: 153px auto 20px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}

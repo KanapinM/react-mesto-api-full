@@ -1,0 +1,11 @@
+.popup__container-image {
+    display: flex;
+    flex-direction: column;
+    min-width: 430px;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__container-image {
+        min-width: 120px;
+    }
+}

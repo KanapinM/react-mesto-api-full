@@ -1,0 +1,38 @@
+.profile__avatar {
+    position: relative;
+    background-image: url(../../../images/custo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    transition: ease-in-out 0.3s;
+}
+
+.profile__avatar::before {
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-image: url(../../../images/pecil.svg);
+    background-position: center;
+    visibility: hidden;
+    transition: ease-in-out 0.3s;
+}
+
+.profile__avatar:hover::before {
+    visibility: visible;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 1024px) {
+    .profile__avatar {
+        margin: 0 auto 27px;
+    }
+}

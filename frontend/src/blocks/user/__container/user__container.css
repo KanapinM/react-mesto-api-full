@@ -1,0 +1,13 @@
+.user__container {
+    margin: 60px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 430px;
+}
+
+@media screen and (max-width: 430px) {
+    .user__container {
+        width: auto;
+    }
+}

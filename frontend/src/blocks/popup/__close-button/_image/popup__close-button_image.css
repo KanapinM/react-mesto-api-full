@@ -1,0 +1,12 @@
+.popup__close-button_image {
+    align-self: flex-end;
+    margin-right: -40px;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__close-button_image {
+        align-self: flex-end;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

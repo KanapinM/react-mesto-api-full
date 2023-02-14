@@ -1,0 +1,23 @@
+.header__href {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    align-self: center;
+    text-decoration: none;
+    color: white;
+    transition: ease-in-out 0.3s;
+}
+
+.header__href:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 767px) {
+    .header__href {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

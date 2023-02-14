@@ -1,0 +1,26 @@
+.header__quit-button {
+    margin: 0 0 0 20px;
+    padding: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    border: none;
+    background-color: black;
+    color: #A9A9A9;
+    transition: ease-in-out 0.3s;
+    cursor: pointer;
+}
+
+.header__quit-button:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 767px) {
+    .header__href {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

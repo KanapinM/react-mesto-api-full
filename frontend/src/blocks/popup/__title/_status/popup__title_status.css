@@ -1,0 +1,14 @@
+.popup__title_status {
+    margin-bottom: 60px;
+    text-align: center;
+    width: 358px;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__title_status {
+        margin: 40px 22px 50px;
+        font-size: 20px;
+        line-height: 24px;
+        width: 244px;
+    }
+}

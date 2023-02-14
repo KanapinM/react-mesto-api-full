@@ -1,0 +1,8 @@
+.card__place {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 282px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+}

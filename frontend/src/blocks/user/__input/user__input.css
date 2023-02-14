@@ -1,0 +1,22 @@
+.user__input {
+    margin: 0px auto 30px;
+    padding: 0 0 13px 0;
+    background-color: black;
+    color: white;
+    border-width: 0 0 2px 0;
+    border-color: #CCCCCC;
+
+    min-width: 358px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .user__input {
+        min-width: 260px;
+        margin-bottom: 0px auto 20px;
+    }
+}

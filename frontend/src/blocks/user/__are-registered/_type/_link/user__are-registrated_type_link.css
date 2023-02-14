@@ -1,0 +1,9 @@
+.user__are-registrated_type_link {
+    text-decoration: none;
+    color: white;
+    transition: ease-in-out 0.3s;
+}
+
+.user__are-registrated_type_link:hover {
+    opacity: 0.6;
+}
