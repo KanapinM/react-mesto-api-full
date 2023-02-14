@@ -10,10 +10,10 @@ function Card({ card, onCardClick, onCardLike, onCardAgreement }) {
         likes: card.likes || [],
         // likes: card.likes,
         // likeId: card.likes || [],
-        owner: card.owner,
-        ownerId: card.owner._id,
+        owner: card.owner || {},
+        // ownerId: card.owner._id,
     };
-    const isOwn = cardData.ownerId === currentUser._id;
+    const isOwn = cardData.owner._id === currentUser._id;
     // const isOwn = cardData.owner === currentUser;
 
 
