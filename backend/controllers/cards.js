@@ -59,7 +59,7 @@ module.exports.likeCard = (req, res, next) => {
     .orFail(() => {
       next(new NotFoundError('Передан несуществующий _id карточки.'));
     })
-    .then((likeCard) => res.send({ likeCard }))
+    .then((likeCard) => res.send(likeCard))
     .catch((err) => {
       if (err.name === 'CastError') {
         next(new BadRequest('Переданы некорректные данные для постановки лайка.'));
@@ -78,7 +78,7 @@ module.exports.dislikeCard = (req, res, next) => {
     .orFail(() => {
       next(new NotFoundError('Передан несуществующий _id карточки.'));
     })
-    .then((dislikeCard) => res.send({ dislikeCard }))
+    .then((dislikeCard) => res.send(dislikeCard))
     .catch((err) => {
       if (err.name === 'CastError') {
         return next(new BadRequest('Переданы некорректные данные для снятия лайка.'));

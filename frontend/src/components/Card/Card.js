@@ -17,12 +17,12 @@ function Card({ card, onCardClick, onCardLike, onCardAgreement }) {
     // const isOwn = cardData.owner === currentUser;
 
 
-    // const cardDeleteButtonClassName = (
-    //     `card__delete-button ${isOwn ? 'card__delete-button_active' : 'card__delete-button'}`
-    // );
     const cardDeleteButtonClassName = (
-        `card__delete-button card__delete-button_active`
+        `card__delete-button ${isOwn ? 'card__delete-button_active' : 'card__delete-button'}`
     );
+    // const cardDeleteButtonClassName = (
+    //     `card__delete-button card__delete-button_active`
+    // );
 
     function handleClickImage() {
         onCardClick(card);
