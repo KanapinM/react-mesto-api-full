@@ -1,6 +1,6 @@
 export const options = {
     // URL: 'https://auth.nomoreparties.co',
-    URL: 'http://api.mkmesto.nomoredomains.work',
+    URL: 'https://api.mkmesto.nomoredomains.work',
     method: 'POST',
     credentials: "include",
     headers: {

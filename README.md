@@ -2,5 +2,5 @@
 Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположен в директории `backend/`, а фронтенд - в `frontend/`. 
   
 IP  84.201.173.87
-Frontend  http://mkmesto.nomoredomains.work
-Backend  http://api.mkmesto.nomoredomains.work
+Frontend  https://mkmesto.nomoredomains.work
+Backend  https://api.mkmesto.nomoredomains.work

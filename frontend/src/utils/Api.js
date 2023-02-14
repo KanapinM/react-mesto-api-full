@@ -102,7 +102,7 @@ export class Api {
 //     },
 // });
 const api = new Api({
-    url: 'http://api.mkmesto.nomoredomains.work',
+    url: 'https://api.mkmesto.nomoredomains.work',
     headers: {
         'Content-Type': 'application/json',
         // authorization: '3249fd8a9a9b728c91370877b91d437f726d199291890896dd5e838f6794f31d'
