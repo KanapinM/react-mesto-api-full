@@ -64,6 +64,12 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 app.post('/signin', signInValidation(), login);
 app.post('/signup', signUpValidation(), createUser);
 app.use(auth);
