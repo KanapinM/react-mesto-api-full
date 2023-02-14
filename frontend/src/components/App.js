@@ -123,7 +123,6 @@ function App() {
       .then((data) => {
         if (data.token) {
           setEmail(email);
-          // document.cookie.jwt = data.token;
           setLoggedIn(true);
           history.push('/');
           return data;
@@ -154,18 +153,10 @@ function App() {
   function onQuit() {
     document.cookie = undefined;
     console.log(document.cookie);
-    // localStorage.removeItem('jwt');
     setLoggedIn(false);
   }
 
   function checkToken() {
-    // const jwt = document.cookie.jwt;
-
-    // const jwt = localStorage.getItem('jwt');
-    // if (jwt) {
-
-    // const RegExp = /false|true/ig;
-    // const jwtValid = document.cookie.match(RegExp) || false;
     if (document.cookie !== undefined) {
       return auth
         .checkToken()

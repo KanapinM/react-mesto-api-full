@@ -1,5 +1,4 @@
 export const options = {
-    // URL: 'https://auth.nomoreparties.co',
     URL: 'https://api.mkmesto.nomoredomains.work',
     method: 'POST',
     credentials: "include",
@@ -38,7 +37,6 @@ class Auth {
                 return this._response(res);
             })
             .then((data) => {
-                // localStorage.setItem('token', data.token);
                 console.log(data);
                 return data;
             });
@@ -58,10 +56,6 @@ class Auth {
                 return this._response(res);
             })
             .then((data) => {
-                // if (data.token) {
-                //     localStorage.setItem('jwt', data.token);
-                //     return data;
-                // }
                 document.cookie = data.token;
                 console.log(document.cookie);
                 console.log(data);
@@ -75,7 +69,6 @@ class Auth {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                // 'Authorization': `Bearer ${jwt}`,
             },
             credentials: this.credentials
         })
