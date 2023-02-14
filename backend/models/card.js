@@ -17,7 +17,7 @@ const cardSchema = new mongoose.Schema({
     },
   },
   owner: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.Object,
     ref: 'user',
     required: true,
   },
