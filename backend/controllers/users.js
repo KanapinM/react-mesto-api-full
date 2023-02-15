@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 
 // const { NODE_ENV, JWT_SECRET } = process.env;
-const { JWT_SECRET = 'JWT_SECRET' } = process.env;
+const { JWT_SECRET = '36a68e72cdbf3047f461711d31dc3d817057d00060ea467e25808f5d4f474d7b' } = process.env;
 // const { JWT_SECRET = '3249fd8a9a9b728c91370877b91d437f726d199291890896dd5e838f6794f31d' } = process.env;
 
 const BadRequest = require('../errors/BadRequest');
