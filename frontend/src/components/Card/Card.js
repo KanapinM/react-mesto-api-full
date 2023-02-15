@@ -9,9 +9,10 @@ function Card({ card, onCardClick, onCardLike, onCardAgreement }) {
         name: card.name,
         likes: card.likes || [],
         owner: card.owner || {},
+        ownerId: card.owner._id ? card.owner._id : card.owner,
     };
     // const isOwn = cardData.owner._id === currentUser._id;
-    const isOwn = cardData.owner._id || cardData.owner === currentUser._id;
+    const isOwn = cardData.ownerId === currentUser._id;
 
     const cardDeleteButtonClassName = (
         `card__delete-button ${isOwn ? 'card__delete-button_active' : 'card__delete-button'}`
