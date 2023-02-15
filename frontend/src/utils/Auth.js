@@ -57,8 +57,8 @@ class Auth {
             })
             .then((data) => {
                 document.cookie = data.token;
-                console.log(document.cookie);
-                console.log(data);
+                // console.log(document.cookie);
+                // console.log(data);
                 return data;
             })
     }

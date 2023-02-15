@@ -152,7 +152,6 @@ function App() {
 
   function onQuit() {
     document.cookie = undefined;
-    console.log(document.cookie);
     setLoggedIn(false);
   }
 
