@@ -27,7 +27,7 @@ module.exports.deleteCard = (req, res, next) => {
     .populate('owner')
     .then((card) => {
       const potentialUserId = req.user._id;
-      const ownerUserId = card ? card.owner.toString() : false;
+      const ownerUserId = card ? card.owner._id.toString() : false;
 
       if (!card) {
         return next(new NotFoundError('Карточка с указанным _id не найдена.'));
